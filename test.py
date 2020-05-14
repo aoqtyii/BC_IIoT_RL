@@ -87,4 +87,6 @@ from geographical_coordination import geographical_coordination
 
 instance1 = geographical_coordination(-1, 1, -1, 1)
 gini_lambda = stake_distribution(2, (10, 20)).get_Gini_lambda(instance1)
+gini_gamma = stake_distribution(2, (10, 20)).get_Gini_stake(instance1)
 print(gini_lambda)
+print(gini_gamma)
