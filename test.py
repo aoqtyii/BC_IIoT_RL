@@ -67,15 +67,15 @@ from stake_distribution import stake_distribution
 #
 # print(match.groups())
 
-import gym
-
-# create_env = lambda: gym.make('BlockChain-v0')
-# dummy_env = create_env()
-env = gym.make('BlockChain-v0')
-env.reset()
-
-for _ in range(3):
-    print(env.step(env.action_space.sample()))
+# import gym
+#
+# # create_env = lambda: gym.make('BlockChain-v0')
+# # dummy_env = create_env()
+# env = gym.make('BlockChain-v0')
+# env.reset()
+#
+# for _ in range(3):
+#     print(env.step(env.action_space.sample()))
 
 
 # state = np.concatenate((np.random.uniform(low=0, high=1, size=(3,)), np.random.uniform(low=10, high=30, size=(1,)),
@@ -83,8 +83,8 @@ for _ in range(3):
 #
 # print(np.array(state))
 
-# from geographical_coordination import geographical_coordination
-#
-# instance1 = geographical_coordination(-1, 1, -1, 1)
-# gini_lambda = stake_distribution(2, (10, 20)).get_Gini_lambda(instance1)
-# print(gini_lambda)
+from geographical_coordination import geographical_coordination
+
+instance1 = geographical_coordination(-1, 1, -1, 1)
+gini_lambda = stake_distribution(2, (10, 20)).get_Gini_lambda(instance1)
+print(gini_lambda)
